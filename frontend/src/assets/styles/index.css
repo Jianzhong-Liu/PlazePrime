@@ -1,0 +1,100 @@
+main {
+  min-height: 80vh;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+.rating svg {
+  color: #f8e825;
+}
+
+.logo-image {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}
+
+.product-title {
+  height: 2.5em; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+table td,
+table th {
+  text-align: center;
+}
+
+.review {
+  margin-top: 30px;
+}
+
+.review h2 {
+  font-size: 24px;
+  background: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.review button {
+  margin-top: 10px;
+}
+
+.carousel-caption {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-custom {
+  background-color: #f82e50;
+}
+
+.footer-font{
+  color: #f82e50;
+}
+
+.box{
+  border: 1px solid #ebf1f5;
+  color:#ebf1f5 
+}
+
+h1{
+  color:#f82e50 
+}
+
+.box:hover {
+  border: 1px solid #ebf1f5!important;
+  background-color: #ebf1f5!important; /* Change background color on hover */
+  color: #f82e50 !important; /* Optionally change border color on hover */
+}
+
+.red-button{
+  background-color:#f82e50!important; /* Change background color on hover */
+  color:#ebf1f5  !important; /* Optionally change border color on hover */
+  border: 1px solid #f82e50
+}
+
+.red-button:hover{
+  background-color:red!important; /* Change background color on hover */
+  color: #ebf1f5 !important; /* Optionally change border color on hover */
+  border: 1px solid red 
+}
+
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-toggler-icon {
+    color: #ebf1f5; /* Color that ensures good contrast and visibility */
+}
