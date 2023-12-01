@@ -21,10 +21,22 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors())
+
+
+const allowedOrigins = [
+  'http://localhost:3000', // Development origin
+  'https://plaze-prime.onrender.com' // Production origin
+];
 
 app.use(cors({
-  origin: process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://plaze-prime.onrender.com'
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true // Include credentials for cross-origin requests
 }));
 
 app.use('/api/products', productRoutes);
@@ -34,7 +46,7 @@ app.use('/api/upload', uploadRoutes);
 
 app.get('/api/config/paypal', (req, res) =>
   res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
-);
+)
 
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.resolve();
